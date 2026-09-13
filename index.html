@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KrishiRakshak AI | Smart Farming</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <!-- Brand -->
+    <div class="brand">
+
+        <div class="brand-logo">
+            <i class="fa-solid fa-seedling"></i>
+        </div>
+
+        <div class="brand-text">
+            <h2>KrishiRakshak</h2>
+            <span>AI Farming Assistant</span>
+        </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+
+        <a href="#dashboard" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="#my-farm" class="nav-item">
+            <i class="fa-solid fa-tractor"></i>
+            <span>My Farm</span>
+        </a>
+
+        <a href="#crop-risk" class="nav-item">
+            <i class="fa-solid fa-shield-heart"></i>
+            <span>Crop Risk</span>
+        </a>
+
+        <a href="#crop-scan" class="nav-item">
+            <i class="fa-solid fa-camera"></i>
+            <span>Crop Scan</span>
+        </a>
+
+        <a href="#weather" class="nav-item">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <span>Weather</span>
+        </a>
+
+        <a href="#ai-assistant" class="nav-item">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>AI Assistant</span>
+        </a>
+
+        <a href="#market-insights" class="nav-item">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Market Insights</span>
+        </a>
+
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>History</span>
+        </a>
+
+    </nav>
+
+
+    <!-- Farm Mini Card -->
+   <div class="farm-card" id="my-farm">
+
+        <div class="farm-card-top">
+            <span>MY FARM</span>
+
+            <button id="editFarmBtn">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+        </div>
+
+        <h3>Rampur Farm</h3>
+
+        <p>
+            <i class="fa-solid fa-location-dot"></i>
+            Rampur, Uttar Pradesh
+        </p>
+
+        <div class="farm-details">
+
+            <div>
+                <span>Crop</span>
+                <strong>Wheat</strong>
+            </div>
+
+            <div>
+                <span>Area</span>
+                <strong>5.6 Acres</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Online Status -->
+    <div class="online-status">
+
+        <span class="online-dot"></span>
+
+        <div>
+            <strong>System Online</strong>
+            <small>AI services active</small>
+        </div>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+ <main class="main-content" id="dashboard">
+
+    <!-- =================================================
+         TOP HEADER
+    ================================================= -->
+
+    <header class="topbar">
+
+        <div class="welcome-section">
+
+            <p class="small-heading">
+                FARM OVERVIEW
+            </p>
+
+            <h1>
+                Good morning, Farmer 👋
+            </h1>
+
+            <p class="welcome-text">
+                Here's what's happening with your farm today.
+            </p>
+
+        </div>
+
+
+        <div class="topbar-actions">
+
+            <!-- Language -->
+            <div class="language-switch">
+
+                <button class="language active">
+                    EN
+                </button>
+
+                <button class="language">
+                    हिंदी
+                </button>
+
+            </div>
+
+
+            <!-- Notification -->
+            <button class="top-icon">
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="notification-dot"></span>
+            </button>
+
+
+            <!-- Profile -->
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    F
+                </div>
+
+                <div class="profile-info">
+                    <strong>Farmer</strong>
+                    <span>Rampur Farm</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         FARM HERO
+    ================================================= -->
+
+    <section class="hero-card">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                <span class="pulse"></span>
+                AI FARM MONITORING
+            </div>
+
+            <h2>
+                Keep your crops healthy,
+                <br>
+                <span>grow with confidence.</span>
+            </h2>
+
+            <p>
+                KrishiRakshak AI continuously analyzes your
+                crop, weather and farm conditions to help
+                you make better decisions.
+            </p>
+
+
+            <div class="hero-actions">
+
+                <button class="primary-btn" id="scanCropBtn">
+                  <i class="fa-solid fa-camera"></i>
+                  Scan My Crop
+                </button>
+
+                <button class="voice-btn" id="voiceBtn">
+                    <i class="fa-solid fa-microphone"></i>
+                    Ask AI
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Agriculture Image -->
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85"
+                alt="Green agricultural field"
+            >
+
+            <div class="image-overlay-card">
+
+                <div class="overlay-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+                <div>
+                    <span>Current Crop</span>
+                    <strong>Wheat</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         QUICK STATS
+    ================================================= -->
+
+    <section class="stats-grid">
+
+
+        <!-- Farm Health -->
+        <div class="stat-card">
+
+            <div class="stat-card-header">
+
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <span>Farm Health</span>
+
+            </div>
+
+            <div class="stat-number">
+                82
+                <small>/100</small>
+            </div>
+
+            <div class="stat-status good">
+                <i class="fa-solid fa-arrow-up"></i>
+                Good condition
+            </div>
+
+        </div>
+
+
+        <!-- Crop Risk -->
+        <div class="stat-card">
+
+            <div class="stat-card-header">
+
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <span>Crop Risk</span>
+
+            </div>
+
+            <div class="stat-number">
+                28
+                <small>%</small>
+            </div>
+
+            <div class="stat-status good">
+                <i class="fa-solid fa-circle-check"></i>
+                Low risk
+            </div>
+
+        </div>
+
+
+        <!-- Weather -->
+        <div class="stat-card">
+
+            <div class="stat-card-header">
+
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                </div>
+
+                <span>Weather Risk</span>
+
+            </div>
+
+            <div class="stat-number">
+                24
+                <small>%</small>
+            </div>
+
+            <div class="stat-status good">
+                <i class="fa-solid fa-circle-check"></i>
+                Stable
+            </div>
+
+        </div>
+
+
+        <!-- Soil -->
+        <div class="stat-card">
+
+            <div class="stat-card-header">
+
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+
+                <span>Soil Moisture</span>
+
+            </div>
+
+            <div class="stat-number">
+                64
+                <small>%</small>
+            </div>
+
+            <div class="stat-status good">
+                <i class="fa-solid fa-check"></i>
+                Optimal
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MAIN GRID
+    ================================================= -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- =============================================
+             CROP HEALTH
+        ============================================== -->
+
+        <div class="dashboard-card crop-health-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <div class="card-title">
+
+                        <div class="title-icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+
+                        <div>
+                            <h2>Crop Health</h2>
+                            <p>Current wheat crop condition</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="more-btn">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+
+            </div>
+
+
+            <div class="health-content">
+
+                <div class="health-score">
+
+                    <div class="health-circle">
+
+                        <div>
+                            <strong>82</strong>
+                            <span>/100</span>
+                        </div>
+
+                    </div>
+
+                    <div class="health-label">
+                        <span class="status-dot"></span>
+                        Healthy
+                    </div>
+
+                </div>
+
+
+                <div class="health-info">
+
+                    <div class="health-row">
+
+                        <div>
+                            <i class="fa-solid fa-temperature-half"></i>
+                            <span>Temperature</span>
+                        </div>
+
+                        <strong>29°C</strong>
+
+                    </div>
+
+
+                    <div class="health-row">
+
+                        <div>
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Soil Moisture</span>
+                        </div>
+
+                        <strong>64%</strong>
+
+                    </div>
+
+
+                    <div class="health-row">
+
+                        <div>
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Rain Forecast</span>
+                        </div>
+
+                        <strong>18%</strong>
+
+                    </div>
+
+
+                    <div class="health-row">
+
+                        <div>
+                            <i class="fa-solid fa-wheat-awn"></i>
+                            <span>Growth Stage</span>
+                        </div>
+
+                        <strong>Flowering</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             WEATHER
+        ============================================== -->
+
+        <div class="dashboard-card weather-card" id="weather">
+
+            <div class="card-header">
+
+                <div class="card-title">
+
+                    <div class="title-icon weather-icon">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+
+                    <div>
+                        <h2>Today's Weather</h2>
+                        <p>Rampur, Uttar Pradesh</p>
+                    </div>
+
+                </div>
+
+                <span class="weather-date">
+                    Today
+                </span>
+
+            </div>
+
+
+            <div class="weather-main">
+
+                <div class="temperature">
+                    29°
+                    <span>C</span>
+                </div>
+
+                <div class="weather-condition">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                    <strong>Partly Cloudy</strong>
+                    <span>Feels like 31°C</span>
+                </div>
+
+            </div>
+
+
+            <div class="weather-details">
+
+                <div>
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>Humidity</span>
+                    <strong>68%</strong>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-wind"></i>
+                    <span>Wind</span>
+                    <strong>12 km/h</strong>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-umbrella"></i>
+                    <span>Rain</span>
+                    <strong>18%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             AI RISK
+        ============================================== -->
+
+        <div class="dashboard-card risk-card" id="crop-risk">
+
+            <div class="card-header">
+
+                <div class="card-title">
+
+                    <div class="title-icon risk-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <div>
+                        <h2>AI Crop Risk</h2>
+                        <p>Multi-signal analysis</p>
+                    </div>
+
+                </div>
+
+                <span class="live-badge">
+                    LIVE
+                </span>
+
+            </div>
+
+
+            <div class="risk-score">
+
+                <div class="risk-number">
+                    28
+                    <small>%</small>
+                </div>
+
+                <div class="risk-level">
+                    <span class="risk-dot"></span>
+                    Low Risk
+                </div>
+
+            </div>
+
+
+            <div class="risk-factors">
+
+                <div class="factor">
+
+                    <div class="factor-top">
+                        <span>Heat Stress</span>
+                        <strong>18%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:18%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="factor">
+
+                    <div class="factor-top">
+                        <span>Soil Moisture</span>
+                        <strong>22%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:22%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="factor">
+
+                    <div class="factor-top">
+                        <span>Rain Forecast</span>
+                        <strong>12%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:12%"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             TODAY'S ACTION
+        ============================================== -->
+
+        <div class="dashboard-card action-card">
+
+            <div class="card-header">
+
+                <div class="card-title">
+
+                    <div class="title-icon action-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+
+                    <div>
+                        <h2>Today's Action Plan</h2>
+                        <p>Recommended by KrishiRakshak AI</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="action-main">
+
+                <div class="action-check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div>
+
+                    <span class="action-label">
+                        RECOMMENDED ACTION
+                    </span>
+
+                    <h3>
+                        Monitor soil moisture
+                    </h3>
+
+                    <p>
+                        Current moisture levels are healthy.
+                        Check again before the next irrigation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button class="action-button">
+                View Full Recommendation
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FARM IMAGE + AI ASSISTANT
+    ================================================= -->
+   <!-- =================================================
+     CROP SCAN
+================================================= -->
+
+    <section class="bottom-grid">
+
+
+        <!-- Agriculture Image -->
+        <div class="field-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?auto=format&fit=crop&w=1200&q=85"
+                alt="Agricultural field"
+            >
+
+            <div class="field-overlay">
+
+                <span>YOUR FARM</span>
+
+                <h2>
+                    Healthy fields.
+                    <br>
+                    Smarter decisions.
+                </h2>
+
+                <p>
+                    AI-powered insights for every stage
+                    of your crop journey.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- AI Assistant -->
+        <div class="assistant-card">
+
+            <div class="assistant-top">
+
+                <div class="assistant-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <div>
+
+                    <span>KRISHIRAKSHAK AI</span>
+
+                    <h2>
+                        Need help with your farm?
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <p class="assistant-text">
+                Ask me anything about your crop,
+                weather, disease risk or farming decisions.
+            </p>
+
+
+            <div class="assistant-input-wrap">
+              <textarea
+                id="assistantInput"
+                 placeholder="Ask in English or हिंदी..."
+                 rows="1"
+                ></textarea>
+
+                <button id="assistantVoice" type="button">
+                 <i class="fa-solid fa-microphone"></i>
+                </button>
+
+                 <button id="assistantSend" type="button">
+                   <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+
+            <div class="quick-questions">
+
+                <button>
+                    Crop health?
+                </button>
+
+                <button>
+                    कब सिंचाई करें?
+                </button>
+
+                <button>
+                    Weather risk?
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- =================================================
+     MARKET INSIGHTS
+================================================= -->
+
+<section class="market-section" id="market-insights">
+
+    <div class="section-heading">
+        <div>
+            <span class="section-label">MARKET INTELLIGENCE</span>
+            <h2>Market Insights</h2>
+            <p>Useful market information for your crop decisions.</p>
+        </div>
+
+        <span class="market-live">
+            <span></span>
+            LIVE
+        </span>
+    </div>
+
+    <div class="market-grid">
+
+        <div class="market-card">
+            <div class="market-card-top">
+                <div class="market-icon">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                </div>
+                <span>WHEAT</span>
+            </div>
+
+            <h3>₹2,425</h3>
+            <p>Estimated market price / quintal</p>
+
+            <div class="market-change positive">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                +3.2% this week
+            </div>
+        </div>
+
+
+        <div class="market-card">
+            <div class="market-card-top">
+                <div class="market-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <span>PRICE TREND</span>
+            </div>
+
+            <h3>Rising</h3>
+            <p>Market movement over recent days</p>
+
+            <div class="trend-bar">
+                <span style="width:72%"></span>
+            </div>
+        </div>
+
+
+        <div class="market-card recommendation-card">
+            <div class="market-card-top">
+                <div class="market-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <span>AI RECOMMENDATION</span>
+            </div>
+
+            <h3>Monitor before selling</h3>
+
+            <p>
+                Current wheat prices show a positive trend.
+                Consider monitoring the market before making a selling decision.
+            </p>
+
+            <div class="recommendation-status">
+                <i class="fa-solid fa-circle-check"></i>
+                Favorable trend
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =================================================
+         FOOTER
+    ================================================= -->
+
+    <footer class="dashboard-footer">
+
+        <span>
+            © 2026 KrishiRakshak AI
+        </span>
+
+        <span>
+            Smart farming • Better decisions • Better harvest
+        </span>
+     
+    </footer>
+
+</main>
+
+
+<!-- =====================================================
+     SCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
